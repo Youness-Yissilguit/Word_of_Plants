@@ -1,7 +1,7 @@
 body{
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   overflow-x: hidden !important;
 }
 
@@ -44,7 +44,6 @@ button{
 }
 .main-h1{
   color: #fff;
-  font-family: 'Dancing Script', cursive;
   margin-bottom: 20px
 }
 header{
@@ -61,7 +60,7 @@ nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 60px;
+  min-height: 12vh;
   margin-bottom: 50px
 }
 nav .logo span{
@@ -75,7 +74,7 @@ nav ul{
 nav ul li{
   list-style: none;
   display: inline-block;
-  margin-left: 15px;
+  margin-left: 20px;
 }
 nav ul li.cart-i,
 nav ul li.heart-i{
@@ -275,14 +274,18 @@ nav .close{
   transform: translateY(50px);
   opacity: 0;
 }
+.home-content .content h1{
+  font-size: 40px;
+}
 .home-content .content p{
-  color: rgba(255, 255, 255, .7);
+  color: rgba(255, 255, 255, .8);
   line-height: 1.8;
+  font-size: 14px
 }
 .home-content .content .shop{
-  width: 170px;
+  width: 200px;
   text-align: center;
-  padding: 7px;
+  padding: 15px;
   border-radius: 25px;
   background-color: #d6fdf8;
   display: block;
@@ -291,16 +294,14 @@ nav .close{
   font-size: 19px;
   text-decoration: none;
   transition: color .3s ease-in-out;
-  border: 2px solid  transparent;
+  margin-top: 20px
 }
 .home-content .content .shop i{
   margin-left: 10px;
   transform: translateY(2px);
 }
 .home-content .content .shop:hover{
-  background-color: transparent;
-  border-color: #d6fdf8;
-  color: #d6fdf8
+  background-color: #fff;
 }
 .home-content .content-img{
   width: 38%;
@@ -391,7 +392,7 @@ nav .close{
   .pagination{
     position: static;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-bottom: 20px
   }
   .pagination li{
@@ -405,7 +406,7 @@ nav .close{
   overflow: hidden;
 }
 .home-services .service-img{
-  width: 40%;
+  width: 35%;
   margin-right: 3%;
   overflow: hidden;
 }
