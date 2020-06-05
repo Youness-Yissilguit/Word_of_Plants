@@ -95,8 +95,9 @@ nav ul .cart{
 }
 nav ul li a{
   text-decoration: none;
-  color: rgba(255, 255, 255, .8);
+  color: rgba(255, 255, 255, 1);
   transition: all .2s;
+  font-weight: 100;
 }
 nav ul li a:hover,
 nav ul li a.active{
