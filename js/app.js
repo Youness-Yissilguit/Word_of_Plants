@@ -1,3 +1,8 @@
+//loading
+window.addEventListener('load', () => {
+  const loadScreen = document.querySelector('.loading');
+  loadScreen.classList.add('remove');
+});
 $(function () {
   //opning animation for the home page
   var tl = new TimelineMax();
@@ -37,22 +42,26 @@ $(function () {
 
   //add the silide animation between the sections
   $('[data-show="#servises"]').click(function () {
-    tl.from($('.service-img'), {duration: .8, opacity: 0, scale: '.1',rotate: '45deg', ease: 'ease-in-out'})
+    var tlS1 = new TimelineMax();
+    tlS1.from($('.service-img'), {duration: .8, opacity: 0, scale: '.1',rotate: '45deg', ease: 'ease-in-out'})
       .from($('.services-content'), {duration: .8, opacity: 0, y: '60%', ease: Expo.easeOut}, '-=.7')
       .from($('.services-content .box'), {duration: .7, opacity: 0, x: '100%', ease: "power3.inOut", stagger: .1}, '-=.7' );
   });
   $('[data-show="#home"]').click(function () {
-    tl.from($('.home-content .content'), {duration: .8, y: '-50', opacity: 0,  ease: "ease-in-out"})
+    var tlS2 = new TimelineMax();
+    tlS2.from($('.home-content .content'), {duration: .8, y: '-50', opacity: 0,  ease: "ease-in-out"})
       .from($('.content-img .img-1'), {duration: .8, x: '70', opacity: 0,  ease: "ease-in-out"})
       .from($('.content-img .img-2'), {duration: .7, x: '-50', opacity: 0,  ease: "ease-in-out"}, '-=.7');
   });
   $('[data-show="#testim"]').click(function () {
-    tl.from($('.testimonial .one'), {duration: .3, x: '-100%', opacity: 0,  ease: "power3.inOut"})
+    var tlS3 = new TimelineMax();
+    tlS3.from($('.testimonial .one'), {duration: .3, x: '-100%', opacity: 0,  ease: "power3.inOut"})
       .from($('.testimonial .two'), {duration: .3, x: '100%', opacity: 0,  ease: "power3.inOut"}, '-=.3')
       .from($('.testimonial .testim'), {duration: .7, y: '-50', opacity: 0,  ease: "power3.inOut"})
       .from($('.testimonial .sub-title, .testimonial form'), {duration: .8, x: '100%', opacity: 0,  ease: "ease-in-out"});
   });
   $('[data-show="#video"]').click(function () {
+    var tl = new TimelineMax();
     tl.from($('.video .plant-bg1'), {duration: 1, x: '-100%', opacity: 0,  ease: "power3.inOut"})
       .from($('.video .plant-bg2'), {duration: 1, x: '100%', opacity: 0,  ease: "power3.inOut"}, '-=1')
       .from($('.video h1, .video .vedio-container'), {duration: .7, y: '-50', opacity: 0,  ease: "power3.inOut"});
@@ -74,13 +83,5 @@ $(function () {
   $(cartClose).click(function() {
     $(cart).removeClass('show');
   });
-
-  //Call the nice scorll
-  /*$("body").niceScroll({
-    cursorcolor: "#d6fdf8",
-    cursorwidth: "8px",
-    cursorborder: "none",
-    scrollspeed: 10
-  });*/
 
 });

@@ -46,6 +46,24 @@ button{
   color: #fff;
   margin-bottom: 20px
 }
+.loading{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: #fff;
+  z-index: 1000;
+  transition: opacity .2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loading i{
+  font-size: 40px;
+}
+.remove{
+  opacity: 0;
+  pointer-events: none;
+}
 header{
   width: 100%;
   position: absolute;
@@ -407,7 +425,7 @@ nav .close{
   overflow: hidden;
 }
 .home-services .service-img{
-  width: 35%;
+  width: 30%;
   margin-right: 3%;
   overflow: hidden;
 }
@@ -420,6 +438,7 @@ nav .close{
 .home-services .services-content .p{
   font-size: 15px;
   color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 60px
 }
 .home-services .services-content .box{
   display: flex;
@@ -616,7 +635,7 @@ nav .close{
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 40%;
+  width: 30%;
   height: auto;
   mix-blend-mode: multiply;
 }
@@ -629,7 +648,7 @@ nav .close{
   pointer-events: none;
 }
 .video .vedio-container{
-  width: 80%;
+  width: 75%;
   margin: 10px auto;
   position: relative;
 }
